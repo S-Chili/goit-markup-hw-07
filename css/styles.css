@@ -241,7 +241,7 @@
 }
 
 .form-decision {
-  height: 581px;
+  padding: 40px;
 }
 
 .modal-title {
@@ -249,7 +249,6 @@
   align-items: center;
   justify-content: center;
   height: 23px;
-  margin: 40px auto 12px auto;
   font-weight: 700;
   line-height: 1.15;
   font-size: 20px;
@@ -286,11 +285,10 @@
 .decision-btn:hover .decision-cross,
 .decision-btn:focus .decision-cross {
   fill: var(--accent-color);
+  outline: none;
 }
 
 .form-main {
-  margin-right: 40px;
-  margin-left: 40px;
   margin-bottom: 20px;
 }
 
@@ -301,6 +299,7 @@
   text-align: left;
   height: 58px;
   margin-top: 10px;
+  font-size: 12px;
 }
 
 .modal-field input {
@@ -324,7 +323,7 @@
 
 .modal-icon {
   position: absolute;
-  top: 8px;
+  top: 5px;
   left: 12px;
   transform: translateY(150%);
   display: inline-block;
@@ -340,11 +339,13 @@
 .modal-field input:hover ~ .modal-icon,
 .modal-field input:focus ~ .modal-icon {
   fill: rgba(33, 150, 243, 1);
+  outline: none;
 }
 
 .modal-field input:hover,
 .modal-field input:focus {
   border: 1px solid rgba(33, 150, 243, 1);
+  outline: none;
 }
 
 .textarea-field {
@@ -370,6 +371,7 @@
 .textarea-field textarea:hover,
 .textarea-field textarea:focus {
   border: 1px solid rgba(33, 150, 243, 1);
+  outline: none;
 }
 
 textarea::placeholder {
@@ -1039,6 +1041,7 @@ textarea::placeholder {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 
 .footer-field {
@@ -1057,6 +1060,7 @@ textarea::placeholder {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: #fff;
   background: linear-gradient(
     0deg,
     rgba(33, 150, 243, 0),
