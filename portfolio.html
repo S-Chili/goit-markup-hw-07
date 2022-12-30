@@ -22,15 +22,17 @@
     <header class="header section">
       <div class="header__container container">
         <nav class="header__container">
-          <a href="./index.html" class="header__logo"
-            >Web<span class="logo">Studio</span></a
+          <a href="./index.html" class="logotype"
+            >Web<span class="logotype__text logotype__text--black"
+              >Studio</span
+            ></a
           >
           <ul class="nav list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link">Студія</a>
+              <a href="./index.html" class="nav__link current">Студія</a>
             </li>
             <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link current">Портфоліо</a>
+              <a href="./portfolio.html" class="nav__link">Портфоліо</a>
             </li>
             <li class="nav__item"><a href="" class="nav__link">Контакти</a></li>
           </ul>
@@ -355,84 +357,86 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="footer-logo list">
-          <div class="first-footer list">
-            <div class="for-logotype">
-              <a href="./index.html" class="main-logo foot-logo"
-                >Web<span class="logo-footer">Studio</span></a
+        <div class="footer__box list">
+          <div class="footer__card list">
+            <div class="footer__logo">
+              <a href="./index.html" class="logotype logotype--lower"
+                >Web<span class="logotype__text logotype__text--white"
+                  >Studio</span
+                ></a
               >
             </div>
             <address>
-              <ul class="last list">
-                <li>
+              <ul class="address list">
+                <li class="address-item">
                   <a
                     href="https://goo.gl/maps/czEhLgPn86faWdk38"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="footer-item"
+                    class="address__map"
                     >м. Київ, пр-т Лесі Українки, 26</a
                   >
                 </li>
-                <li>
-                  <a href="mailto:info@devstudio.com" class="footer-address"
+                <li class="address-item">
+                  <a href="mailto:info@devstudio.com" class="address__contact"
                     >info@devstudio.com</a
                   >
                 </li>
-                <li>
-                  <a href="tel:+380961111111" class="footer-address"
+                <li class="address-item">
+                  <a href="tel:+380961111111" class="address__contact"
                     >+38 096 111 11 11</a
                   >
                 </li>
               </ul>
             </address>
           </div>
-          <div class="join-us">
-            <p class="join-in">приєднуйтесь</p>
-            <ul class="footer-join list">
-              <li class="actions-item">
+          <div class="subscribe">
+            <p class="subscribe__texts">приєднуйтесь</p>
+            <ul class="subscribe__list list">
+              <li class="actions__item">
                 <a
                   href="#"
                   target="_blank"
                   rel="noreferrer noopener"
-                  class="link-footer foot-hover"
+                  class="actions__network actions__network--white"
                 >
-                  <svg class="network-icon">
+                  <svg class="actions__icon">
                     <use href="./images/symbol-defs.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
-              <li class="actions-item">
+              <li class="actions__item">
                 <a
                   href="#"
                   target="_blank"
                   rel="noreferrer noopener"
-                  class="link-footer foot-hover"
+                  class="actions__network actions__network--white"
                 >
-                  <svg class="network-icon">
+                  <svg class="actions__icon">
                     <use href="./images/symbol-defs.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
-              <li class="actions-item">
+              <li class="actions__item">
                 <a
                   href="#"
                   target="_blank"
                   rel="noreferrer noopener"
-                  class="link-footer foot-hover"
+                  class="actions__network actions__network--white"
                 >
-                  <svg class="network-icon">
+                  <svg class="actions__icon">
                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
-              <li class="actions-item">
+              <li class="actions__item">
                 <a
                   href="#"
                   target="_blank"
                   rel="noreferrer noopener"
-                  class="link-footer foot-hover"
+                  class="actions__network actions__network--white"
                 >
-                  <svg class="network-icon">
+                  <svg class="actions__icon">
                     <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                   </svg>
                 </a>
@@ -441,17 +445,18 @@
           </div>
           <div class="footer-form">
             <form>
-              <p class="join-in">Підпишіться на розсилку</p>
-              <label class="footer-field">
+              <p class="subscribe__texts">Підпишіться на розсилку</p>
+              <label class="footer__field">
                 <input
+                  class="footer__input"
                   type="email"
                   name="email"
                   placeholder="E-mail"
                   id="email"
                 />
-                <button type="submit" class="footer-btn">
+                <button type="submit" class="button button--flex">
                   Підписатися
-                  <svg class="footer-icon">
+                  <svg class="footer__icon">
                     <use href="./images/symbol-defs.svg#icon-iconsend"></use>
                   </svg>
                 </button>
@@ -460,6 +465,7 @@
           </div>
         </div>
       </div>
+      ?
     </footer>
   </body>
 </html>
