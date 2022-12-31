@@ -19,9 +19,7 @@
 }
 
 .modal__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flexbox;
   height: 23px;
   font-weight: 700;
   line-height: 1.15;

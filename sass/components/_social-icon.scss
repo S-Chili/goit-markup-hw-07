@@ -1,7 +1,5 @@
 .actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flexbox;
   margin-bottom: 30px;
   width: 206px;
   margin-right: auto;
@@ -20,9 +18,7 @@
 }
 
 .actions__network {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flexbox;
   width: 44px;
   height: 44px;
   padding: 0;
@@ -34,16 +30,14 @@
   color: #afb1b8;
   background-color: $white-color;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %cubic-bezier;
 }
 
 .actions__icon--white {
   fill: #afb1b8;
 
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %cubic-bezier;
 }
 
 .actions__network:hover .actions__icon--white,
@@ -52,8 +46,7 @@
 }
 
 .actions__icon {
-  display: flex;
-  justify-content: center;
+  @extend %flexbox;
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -68,8 +61,7 @@
   fill: #fff;
   background-color: rgba(255, 255, 255, 0.1);
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %cubic-bezier;
 }
 
 .actions__network--white:hover,

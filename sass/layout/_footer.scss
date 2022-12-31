@@ -14,8 +14,7 @@
 }
 .address__map {
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %cubic-bezier;
 
   color: $white-color;
   font-style: normal;
@@ -29,8 +28,7 @@
 
 .address__contact {
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %cubic-bezier;
 
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
@@ -61,11 +59,10 @@
 }
 
 .footer__field {
-  display: flex;
+  @extend %flexbox;
   flex-direction: row;
   text-align: left;
   width: 570px;
-  align-items: center;
 }
 
 .footer__input {
@@ -84,9 +81,13 @@
   );
 }
 
+.button--flex {
+  @extend %flexbox;
+  width: 200px;
+}
+
 .footer__icon {
-  display: flex;
-  justify-content: center;
+  @extend %flexbox;
   width: 24px;
   height: 23px;
   margin-left: 10px;

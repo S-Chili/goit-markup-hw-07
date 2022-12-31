@@ -1,6 +1,5 @@
 .examples {
-  display: flex;
-  align-items: center;
+  @extend %flexbox;
   flex-wrap: wrap;
   justify-content: space-between;
 }

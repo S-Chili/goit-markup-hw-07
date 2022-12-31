@@ -18,27 +18,22 @@
 }
 
 .customers__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flexbox;
   width: 170px;
   height: 92px;
   padding: 0;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
   background-color: $white-color;
-
   transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %cubic-bezier; 
 }
 
 .customers__logo--accent {
   fill: #afb1b8;
 
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %cubic-bezier;
 }
 
 .customers__link:hover .customers__logo--accent,

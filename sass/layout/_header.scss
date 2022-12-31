@@ -4,8 +4,7 @@
   }
   
   .header__container {
-    display: flex;
-    align-items: center;
+    @extend %flexbox;
   }
 
   .nav {
@@ -29,8 +28,7 @@
     position: relative;
   
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @extend %cubic-bezier;
   }
   
   .nav__link.current::after {
@@ -64,8 +62,7 @@
   }
   
   .contacts__link {
-    display: flex;
-    align-items: center;
+    @extend %flexbox;
     padding-top: 32px;
     padding-bottom: 32px;
     color: $primary-text-color;
@@ -79,8 +76,7 @@
     fill: #757575;
   
     transition-property: fill, color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %cubic-bezier;
   }
   
   .contacts__link--hover:hover,
