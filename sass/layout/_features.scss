@@ -1,0 +1,30 @@
+.features {
+  padding-bottom: 0;
+}
+
+.features__list {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.features__item {
+  width: 270px;
+}
+
+.features__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: $tittle-background-color;
+}
+
+.features__svg {
+  width: 70px;
+  height: 70px;
+}
