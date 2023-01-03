@@ -11,10 +11,10 @@
   margin-right: 10px;
   width: 44px;
   height: 44px;
-}
 
-.actions__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .actions__network {
@@ -24,25 +24,18 @@
   padding: 0;
   border: none;
   border-radius: 50%;
-}
 
-.actions__network--grey {
-  color: #afb1b8;
-  background-color: $white-color;
-  transition-property: background-color;
-  @extend %cubic-bezier;
-}
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 
-.actions__icon--white {
-  fill: #afb1b8;
-
-  transition-property: fill;
-  @extend %cubic-bezier;
-}
-
-.actions__network:hover .actions__icon--white,
-.actions__network:focus .actions__icon--white {
-  fill: $white-color;
+  &--grey {
+    color: #afb1b8;
+    background-color: $white-color;
+    transition-property: background-color;
+    @extend %cubic-bezier;
+  }
 }
 
 .actions__icon {
@@ -52,9 +45,16 @@
   cursor: pointer;
 }
 
-.actions__network:hover,
-.actions__network:focus {
-  background-color: $accent-color;
+.actions__icon--white {
+  fill: #afb1b8;
+
+  transition-property: fill;
+  @extend %cubic-bezier;
+
+  .actions__network:hover &,
+  .actions__network:focus & {
+    fill: $white-color;
+  }
 }
 
 .actions__network--white {

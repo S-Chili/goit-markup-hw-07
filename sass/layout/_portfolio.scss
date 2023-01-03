@@ -5,15 +5,15 @@
 .filter {
   @extend %flexbox;
   margin-bottom: 50px;
-}
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
-}
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
 
-.filter__item {
-  display: block;
-}  
+  &__item {
+    display: block;
+  }  
+}
 
 .filter__button {
   display: block;
@@ -29,38 +29,43 @@
   line-height: 1.63;
   transition-property: color, background-color, border-color;
   @extend %cubic-bezier;
-}
 
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
 .large {
   padding: 6px 25px;
   min-width: 73px;
 }
 
-.filter .filter__button:hover,
-.filter .filter__button:focus {
-  color: $white-color;
-  background-color: $accent-color;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
 .apps {
   display: flex;
   flex-wrap: wrap;
-}
 
-.apps__element {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: 370px;
-}
+  &__element {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 370px;
+  }
 
-.apps__image {
-  position: relative;
-  overflow: hidden;
-}
+  &__image {
+    position: relative;
+    overflow: hidden;
+  }
 
-.apps__block {
-  display: block;
+  &__block {
+    display: block;
+  }
+
+  &__deskr {
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
+    border-right: 1px solid rgba(238, 238, 238, 1);
+    border-left: 1px solid rgba(238, 238, 238, 1);
+  }
 }
 
 .apps__overlay {
@@ -74,39 +79,32 @@
   opacity: 0;
   transition-property: opacity, transform;
   @extend %cubic-bezier;
-}
 
-.apps__overlay > p {
-  margin: 0;
-  padding: 63px 24px;
-  text-align: left;
-  font-size: 18px;
-  line-height: 1.56;
+  & > p {
+    margin: 0;
+    padding: 63px 24px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.56;
+  }
 }
-
-.apps__deskr {
-  border-bottom: 1px solid rgba(238, 238, 238, 1);
-  border-right: 1px solid rgba(238, 238, 238, 1);
-  border-left: 1px solid rgba(238, 238, 238, 1);
-}
-
 
 .shadow {
   transition-property: box-shadow;
   @extend %cubic-bezier;
   display: block;
   text-decoration: none;
-}
 
-.shadow:hover .apps__overlay,
-.shadow:focus .apps__overlay {
-  opacity: 1;
-  transform: translateY(-294px);
-}
+  &:hover .apps__overlay,
+  &:focus .apps__overlay {
+    opacity: 1;
+    transform: translateY(-294px);
+  }
 
-.shadow:hover,
-.shadow:focus {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .apps__element:nth-child(3n) {

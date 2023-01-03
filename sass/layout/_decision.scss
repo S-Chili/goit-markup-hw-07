@@ -49,10 +49,19 @@
   z-index: 1;
   transition-property: revert;
   @extend %cubic-bezier;
-}
 
-.modal__form {
-  padding: 40px;
+  &__form {
+    padding: 40px;
+  }
+
+  &__cross {
+    width: 18px;
+    height: 18px;
+    fill: #000000;
+  
+    transition-property: fill;
+    @extend %cubic-bezier;
+  }
 }
 
 .modal__btn {
@@ -67,35 +76,26 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-}
 
-.modal__btn:hover .modal__cross,
-.modal__btn:focus .modal__cross {
-  fill: $accent-color;
-  outline: none;
-}
-
-.modal__cross {
-  width: 18px;
-  height: 18px;
-  fill: #000000;
-
-  transition-property: fill;
-  @extend %cubic-bezier;
+  &:hover .modal__cross,
+  &:focus .modal__cross {
+    fill: $accent-color;
+    outline: none;
+  }
 }
 
 .form {
   margin-bottom: 20px;
-}
 
-.form__field {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  height: 58px;
-  margin-top: 10px;
-  font-size: 12px;
+  &__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 58px;
+    margin-top: 10px;
+    font-size: 12px;
+  }
 }
 
 .form__input {
@@ -106,6 +106,12 @@
   border-radius: 4px;
   transition-property: border;
   @extend %cubic-bezier;
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+    outline: none;
+  }
 }
 
 .form__icon {
@@ -120,18 +126,12 @@
   fill: $title-text-color;
   transition-property: fill;
   @extend %cubic-bezier;
-}
 
-.form__field input:hover ~ .form__icon,
-.form__field input:focus ~ .form__icon {
-  fill: rgba(33, 150, 243, 1);
-  outline: none;
-}
-
-.form__input:hover,
-.form__input:focus {
-  border: 1px solid rgba(33, 150, 243, 1);
-  outline: none;
+  .form__field input:hover ~ &,
+  .form__field input:focus ~ & {
+    fill: rgba(33, 150, 243, 1);
+    outline: none;
+  }
 }
 
 .form__comment {
@@ -151,18 +151,18 @@
   border-radius: 4px;
   transition-property: border;
   @extend %cubic-bezier;
-}
 
-.form__textarea:hover,
-.form__textarea:focus {
-  border: 1px solid rgba(33, 150, 243, 1);
-  outline: none;
-}
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+    outline: none;
+  }
 
-.form__textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  line-height: 1.2;
-  letter-spacing: 0.01em;
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
 }
 
 .form__agreement {
@@ -188,16 +188,16 @@
   width: 16px;
   height: 15px;
   margin-right: 8px;
-}
 
-.form__checkbox:checked + .form__pic {
-  fill: $accent-color;
-  background-image: url(../images/modalcheck.svg);
-  background-size: contain;
-  width: 16px;
-  height: 15px;
-  background-origin: border-box;
-  border-color: transparent;
+  .form__checkbox:checked + & {
+    fill: $accent-color;
+    background-image: url(../images/modalcheck.svg);
+    background-size: contain;
+    width: 16px;
+    height: 15px;
+    background-origin: border-box;
+    border-color: transparent;
+  }
 }
 
 .form__condition {
@@ -213,9 +213,9 @@
   cursor: pointer;
   transition-property: background-color;
   @extend %cubic-bezier;
-}
 
-.form__button--effects:hover,
-.form__button--effects:focus {
-  background-color: #188ce8;
-}
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}  

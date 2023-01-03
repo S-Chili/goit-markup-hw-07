@@ -43,13 +43,7 @@
 }
 
 .section__title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: $title-text-color;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+  @extend %main-title;
 }
 
 .examples__texts {

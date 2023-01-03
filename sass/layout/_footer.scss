@@ -2,16 +2,17 @@
   background-color: $grey-background;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  &__box {
+    display: inline-flex;
+    align-items: baseline;
+  }
+
+  &__address {
+    width: 231px;
+  }
 }
 
-.footer__box {
-  display: inline-flex;
-  align-items: baseline;
-}
-
-.footer__address {
-  width: 231px;
-}
 .address__map {
   transition-property: color;
   @extend %cubic-bezier;
@@ -19,11 +20,11 @@
   color: $white-color;
   font-style: normal;
   text-decoration: none;
-}
 
-.address__map:hover,
-.address__map:focus {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .address__contact {
@@ -33,11 +34,11 @@
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   text-decoration: none;
-}
 
-.address__contact:hover,
-.address__contact:focus {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .last > li {
@@ -47,6 +48,7 @@
 .last > li:last-child {
   margin-bottom: 0;
 }
+
 .subscribe__list {
   display: inline-flex;
   margin: auto;

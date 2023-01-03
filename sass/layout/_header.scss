@@ -1,22 +1,21 @@
 .header {
     padding: 0;
     border-bottom: 1px solid rgba(236, 236, 236, 1);
-  }
   
-  .header__container {
-    @extend %flexbox;
-  }
+   &__container {
+     @extend %flexbox;
+   }
+}
+.nav {
+  display: flex;
+  margin-left: 93px;
 
-  .nav {
-    display: flex;
-    margin-left: 93px;
-  }
-  
-  .nav__item + .nav__item {
+
+  &__item + &__item {
     margin-left: 50px;
   }
-  
-  .nav__link {
+
+  &__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -30,8 +29,8 @@
     transition-property: color;
     @extend %cubic-bezier;
   }
-  
-  .nav__link.current::after {
+
+  &__link.current::after {
     position: absolute;
     content: "";
     display: block;
@@ -42,54 +41,55 @@
     bottom: 0;
     border-radius: 2px;
   }
-  
-  .nav__link:hover,
-  .nav__link:focus {
+
+  &__link:hover,
+  &__link:focus {
     color: $accent-color;
   }
-  
-  .nav__link.current {
+
+  &__link.current {
     color: $accent-color;
   }
-  
-  .contacts {
-    display: flex;
-    margin-left: auto;
-  }
-  
-  .contacts__item + .contacts__item {
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto;
+
+  &__item + &__item {
     margin-left: 50px;
   }
-  
-  .contacts__link {
-    @extend %flexbox;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: $primary-text-color;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-  }
-  
-  .contacts__link--hover {
+}
+
+.contacts__link {
+  @extend %flexbox;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $primary-text-color;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  &--hover {
     fill: #757575;
   
     transition-property: fill, color;
     @extend %cubic-bezier;
   }
-  
-  .contacts__link--hover:hover,
-  .contacts__link--hover:focus {
+
+  &--hover:hover,
+  &--hover:focus {
     fill: #2196f3;
   }
-  
-  .contacts__icon {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .contacts__link:hover,
-  .contacts__link:focus {
+
+  &:hover,
+  &:focus {
     color: $accent-color;
   }
+}
+
+.contacts__icon {
+  display: inline-block;
+  margin-right: 10px;
+}
